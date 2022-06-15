@@ -1,0 +1,20 @@
+.redirect-groups {
+	td {
+		display: flex;
+		align-items: center;
+	}
+
+	th {
+		width: 30px;
+	}
+
+	select {
+		min-height: 30px;
+	}
+}
+
+.edit-groups {
+	th {
+		width: 70px;
+	}
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<psalm
+    totallyTyped="false"
+    errorLevel="3"
+    phpVersion="5.6"
+    resolveFromConfigFile="true"
+    findUnusedVariablesAndParams="true"
+    strictBinaryOperands="true"
+    ensureArrayStringOffsetsExist="false"
+    runTaintAnalysis="true"
+    findUnusedCode="true"
+    findUnusedPsalmSuppress="true"
+    hoistConstants="true"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="https://getpsalm.org/schema/config"
+    xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
+>
+    <projectFiles>
+        <directory name="."/>
+        <directory name="api"/>
+        <directory name="models"/>
+        <directory name="modules"/>
+        <directory name="matches"/>
+        <directory name="fileio"/>
+		<directory name="database"/>
+        <file name="redirection-settings.php" />
+        <file name="redirection-admin.php" />
+
+        <ignoreFiles>
+            <directory name="vendor"/>
+        </ignoreFiles>
+    </projectFiles>
+    <globals>
+        <var name="wpdb" type="object"/>
+        <var name="RED_MAX_PER_PAGE" type="integer" />
+    </globals>
+    <issueHandlers>
+        <MissingClosureReturnType errorLevel="suppress"/>
+        <MissingClosureParamType errorLevel="suppress"/>
+    </issueHandlers>
+<plugins><pluginClass class="PsalmWordPress\Plugin"/></plugins></psalm>
